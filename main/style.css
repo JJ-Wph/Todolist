@@ -8,8 +8,9 @@ html, body{
 body{
     margin:0;
     background: #3e9163;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3e9163, #106938);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3e9163, #106938); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(123deg, #FFFFFF 0%, #00B2FF 100%), -webkit-linear-gradient(236deg, #BAFF99 0%, #005E64 100%), -webkit-linear-gradient(180deg, #FFFFFF 0%, #002A5A 100%), -webkit-linear-gradient(225deg, #0094FF 20%, #BFF4ED 45%, #280F34 45%, #280F34 70%, #FF004E 70%, #E41655 85%, #B30753 85%, #B30753 100%), -webkit-linear-gradient(135deg, #0E0220 15%, #0E0220 35%, #E40475 35%, #E40475 60%, #48E0E4 60%, #48E0E4 68%, #D7FBF6 68%, #D7FBF6 100%);
+    background: linear-gradient(123deg, #FFFFFF 0%, #00B2FF 100%), linear-gradient(236deg, #BAFF99 0%, #005E64 100%), linear-gradient(180deg, #FFFFFF 0%, #002A5A 100%), linear-gradient(225deg, #0094FF 20%, #BFF4ED 45%, #280F34 45%, #280F34 70%, #FF004E 70%, #E41655 85%, #B30753 85%, #B30753 100%), linear-gradient(135deg, #0E0220 15%, #0E0220 35%, #E40475 35%, #E40475 60%, #48E0E4 60%, #48E0E4 68%, #D7FBF6 68%, #D7FBF6 100%);
+    background-blend-mode: overlay, overlay, overlay, darken, normal;
 }
 
 #app{
@@ -120,7 +121,10 @@ label{
     align-items: center;
     width: 25rem;
     height: 20rem;
-    border: 2px solid #fff;
-    border-radius: 15px;
-    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
