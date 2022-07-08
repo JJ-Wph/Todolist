@@ -13,6 +13,23 @@ body{
     background-blend-mode: overlay, overlay, overlay, darken, normal;
 }
 
+.header{
+    position: fixed;
+    top: 0%;
+    width:100%;
+    height:10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 #app{
     display:flex;
     flex-direction: column;
@@ -30,54 +47,15 @@ body{
     font-size: 1.1em;
     cursor: pointer;
     margin-top: 10px;
-    transition: 0.5s;
+    transition-duration: 0.4s;
 }
 
 .btn:hover{
-    background-color: rgba(160, 23, 23, 0.24)
-}
-
-.modal{
-    position: fixed;
-    top: 0%;
-    width:100%;
-    height:10%;
-    display: block;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 12.5px );
-    -webkit-backdrop-filter: blur( 12.5px );
-    border-radius: 0px 0px 10px 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.modal__okno{
-    background: #f0f0f0;
-    width:500px;
-    border-radius: 16px;
-    padding: 20px;
-    -webkit-box-shadow: -10px 10px 48px -16px rgba(0,0,0,0.44);
-    -moz-box-shadow: -10px 10px 48px -16px rgba(0,0,0,0.44);
-    box-shadow: -10px 10px 48px -16px rgba(0,0,0,0.44);
-}
-
-h1{
-    transition: 1s;
-}
-
-.okno__naglowek{
-    margin: 0;
-    font-size: 2.1em;
-}
-
-.okno__tresc{
-    color: #333;
-    line-height: 1.32;
+    background-color: rgba(160, 23, 23, 0.24);
 }
 
 input{
-    background:transparent;
+    background: transparent;
     border: 2px solid #fff;
     border-radius: 15px;
     color:#fff;
@@ -88,36 +66,6 @@ input{
 input[type='checkbox']{
     width:25px;
     height:25px;
-}
-
-label{
-    display:flex;
-    align-items:center;
-    padding: 10px 0;
-}
-
-.result{
-    background: rgba(0,0,0,.3);
-    padding:20px;
-    border-radius:20px;
-    position:relative;
-}
-
-.progressbar{
-    margin-top:20px;
-    width:300px;
-    height: 40px;
-    border: 2px solid #000;
-    position:relative;
-    overflow:hidden;
-}
-
-.progressbar__bar{
-    height:100%;
-    position:absolute;
-    left:0;
-    bottom:0;
-    transition:.5s;
 }
 
 .form{
