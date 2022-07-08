@@ -11,10 +11,10 @@
     <div id="app">
         <div class="header">
             <h1>Toddo List</h1>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+            <button class="btn" v-if="isLoggin">Dodaj nowe zadanie</button>
+            <button class="btn" v-if="isLoggin">Dodaj nowe zadanie</button>
+            <button class="btn" v-if="isLoggin">Dodaj nowe zadanie</button>
+            <button class="btn" v-if="isLoggin">Dodaj nowe zadanie</button>
         </div>
         <div class="form" v-if="!isLoggin">
             <h2>{{formHeader}}</h2>
@@ -23,7 +23,6 @@
             <button type="submit" class="btn" @click="logginIn">Zaloguj</button>
         </div>
         <div class="todo" v-if="isLoggin">
-            <button>Dodaj notkę</button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
