@@ -11,19 +11,37 @@
     <div id="app">
         <div class="header">
             <h1>Toddo List</h1>
-            <button class="btn" v-if="isLoggin">Dodaj nowe zadanie</button>
-            <button class="btn" v-if="isLoggin">Dodaj nowe zadanie</button>
-            <button class="btn" v-if="isLoggin">Dodaj nowe zadanie</button>
-            <button class="btn" v-if="isLoggin">Dodaj nowe zadanie</button>
         </div>
-        <div class="form" v-if="!isLoggin">
+        <div class="pass">
+            <p>Nick: admin</p>
+            <p>Hasło: qwerty</p>
+        </div>
+        <div class="form" v-if="isLoggin">
             <h2>{{formHeader}}</h2>
             Nick: <input type="text" v-model="nickName">
             Hasło: <input type="password" v-model="password">
             <button type="submit" class="btn" @click="logginIn">Zaloguj</button>
         </div>
-        <div class="todo" v-if="isLoggin">
+
+        <div class="newtask" v-if="!isLoggin">
+            <input type="text" v-model="newTaskTitle" placeholder="Wpisz nazwę zadania">
+            <select id="">
+                <option value="" disabled selected>Wybierz kategorię</option>
+                <option value="praca">Praca</option>
+                <option value="zakupy">Zakupy</option>
+                <option value="dzieci">Dzieci</option>
+                <option value="rozrywka">Rozrywka</option>
+            </select>
+            <input type="date" placeholder="wybierz datę" id="">
+            <button class="btn">Dodaj zadanie</button>
         </div>
+        <div class="todo" v-if="!isLoggin">
+
+
+
+        </div>
+
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="main.js"></script>
