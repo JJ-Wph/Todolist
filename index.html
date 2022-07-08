@@ -16,14 +16,14 @@
             <p>Nick: admin</p>
             <p>Hasło: qwerty</p>
         </div>
-        <div class="form" v-if="isLoggin">
+        <div class="form" v-if="!isLoggin">
             <h2>{{formHeader}}</h2>
             Nick: <input type="text" v-model="nickName">
             Hasło: <input type="password" v-model="password">
             <button type="submit" class="btn" @click="logginIn">Zaloguj</button>
         </div>
 
-        <div class="newtask" v-if="!isLoggin">
+        <div class="newtask" v-if="isLoggin">
             <input type="text" v-model="newTaskTitle" placeholder="Wpisz nazwę zadania">
             <select id="">
                 <option value="" disabled selected>Wybierz kategorię</option>
@@ -35,7 +35,7 @@
             <input type="date" placeholder="wybierz datę" id="">
             <button class="btn">Dodaj zadanie</button>
         </div>
-        <div class="todo" v-if="!isLoggin">
+        <div class="todo" v-if="isLoggin">
 
 
 
