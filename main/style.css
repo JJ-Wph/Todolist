@@ -83,6 +83,16 @@ select option{
     grid-area: 3 / 3 / 7 / 5;
 }
 
+.form > * {
+    margin: 2rem;
+}
+
+.form > p {
+    margin-bottom: -2rem;
+}
+
+
+
 .todo {
     grid-area: 3 / 2 / 8 / 6;
 }

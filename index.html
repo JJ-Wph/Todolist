@@ -18,8 +18,8 @@
         </div>
         <div class="form" v-if="!isLoggin">
             <h2>{{formHeader}}</h2>
-            Nick: <input type="text" v-model="nickName">
-            Hasło: <input type="password" v-model="password">
+            <p>Nick:</p><input type="text" v-model="nickName">
+            <p>Hasło:</p><input type="password" v-model="password">
             <button type="submit" class="btn" @click="logginIn">Zaloguj</button>
         </div>
 
