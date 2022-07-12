@@ -23,7 +23,7 @@
             <button type="submit" class="btn" @click="logginIn">Zaloguj</button>
         </div>
 
-        <div class="newtask" v-if="!isLoggin">
+        <div class="newtaskform" v-if="!isLoggin">
             <input type="text" v-model="taskTitle" placeholder="Wpisz nazwę zadania">
             <select v-model="taskCategory">
                 <option value="" disabled selected>Wybierz kategorię</option>
@@ -40,27 +40,16 @@
 
 
         <div class="todo" v-if="!isLoggin">
-
-            <table>
-                <tr>
-                    <th>L.p.</th>
-                    <th>Nazwa zadania</th>
-                    <th>Kategoria</th>
-                    <th>Data</th>
-                    <th>Opcje</th>
-                </tr>
-                <tr v-for="(item, index) in newTaskData">
-                    <td>{{index+1}}</td>
-                    <td>{{item.taskTitle}}</td>
-                    <td>{{item.taskCategory}}</td>
-                    <td>{{item.taskDate}}</td>
-                    <td>
-                        <button class="btnTodo">usuń</button>
-                        <button class="btnTodo">zakończ</button>
-                    </td>
-                </tr>
-            </table>
-
+            
+                <div class="newtask" v-for="item in newTaskData" :class="{ finished: isFinished }">
+                    <input class="firstP" type="checkbox" v-model="isFinished">
+                    <h3 class="secondP">{{item.taskTitle}}</h3>
+                    <p class="thirdP">{{item.taskCategory}}</p>
+                    <p class="forthP">{{item.taskDate}}</p>
+                    <p class="fifthP">
+                        <button class="btnTodo" @click="newTaskData.splice(index, 1)">usuń</button>
+                    </p>
+                </div>
         </div>
 
 

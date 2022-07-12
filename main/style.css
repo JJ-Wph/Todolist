@@ -42,12 +42,19 @@ h1{
     letter-spacing: 2.5vw;
 }
 
+.pass { 
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / 6 / 2 / 7; 
+    z-index: 1;
+}
+
 .btn, .btnTodo {
     background-color: rgba(0,0,0,0.44);
     color:#fff;
     border:2px solid #fff;
     padding: 0.3rem 2rem;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     cursor: pointer;
 }
 
@@ -55,7 +62,7 @@ h1{
     background-color: rgba(160, 23, 23, 0.24);
 }
 
-input, select, select option{
+input[type=text], input[type=date], select, select option{
     background: transparent;
     -webkit-appearance: none;
     border: 2px solid #fff;
@@ -68,7 +75,7 @@ select option{
     background-color: rgba(179, 37, 171, 0.75);
 }
 
-.form, .todo, .newtask {
+.form, .todo, .newtaskform, .newtask {
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 12.5px );
@@ -92,37 +99,65 @@ select option{
     margin-bottom: -2rem;
 }
 
-.newtask {
+.newtaskform {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     grid-area: 2 / 2 / 3 / 6; 
     font-size: 1vw;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .todo {
     grid-area: 3 / 2 / 8 / 6;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
 }
 
 .todo > * {
-    font-size: 1.6vw;
-    text-align: center;
-    width: 100%;
-    margin: 1rem;
+    display: flex;
+    font-size: 1.2vw;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    margin: 0.4rem;
     background: transparent;
 }
 
-td, th  {
-    border: 1px solid black;
-}
-
-.pass { 
+p, h3 {
     display: flex;
-    flex-direction: column;
-    grid-area: 1 / 6 / 2 / 7; 
-    z-index: 1;
+    align-items: center;
+    justify-content: center;
 }
 
+.firstP {
+    flex: 1 1 auto;
+}
+.secondP {
+    flex: 5 5 auto;
+}
+.thirdP {
+    flex: 1 1 auto;
+}
+.forthP {
+    flex: 1 1 auto;
+}
+.fifthP {
+    flex: 0.5 1 auto;
+}
+
+input[type=checkbox] {
+    width: 2vw;
+    height: 2vh;
+}
+
+.finished {
+    background-color: rgba(32, 194, 26, 0.664);
+}
+
+@media screen and (max-width: 1280px) {
+    
+}

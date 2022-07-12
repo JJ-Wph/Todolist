@@ -12,7 +12,8 @@ new Vue({
         taskTitle: "",
         taskCategory: "",
         taskDate: "",
-        newTaskData: []
+        newTaskData: [],
+        isFinished: false
     },
 
     methods: {
@@ -58,10 +59,7 @@ new Vue({
               this.taskCategory = "";
               this.taskDate = "";
             }
-
-            console.log(this.taskDate);
-
-        }
-
+        },
+        
     }
 });
