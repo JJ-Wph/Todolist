@@ -52,27 +52,15 @@ h1{
 .btn, .btnTodo {
     background-color: rgba(0,0,0,0.44);
     color:#fff;
-    border:2px solid #fff;
-    padding: 0.3rem 2rem;
-    font-size: 1.2vw;
+    border:2px solid rgba(255, 255, 255, 0.5);
+    padding: 0.3vw 2vw;
+    margin: 1vw 1vw 1vw 1vw;
+    font-size: 1em;
     cursor: pointer;
 }
 
 .btn:hover, .btnTodo:hover {
     background-color: rgba(160, 23, 23, 0.24);
-}
-
-input[type=text], input[type=date], select, select option{
-    background: transparent;
-    -webkit-appearance: none;
-    border: 2px solid #fff;
-    color:#fff;
-    font-size: 1.2em;
-    padding: 0.3rem 2rem;
-}
-
-select option{
-    background-color: rgba(179, 37, 171, 0.75);
 }
 
 .form, .todo, .newtaskform, .newtask {
@@ -81,6 +69,28 @@ select option{
     backdrop-filter: blur( 12.5px );
     -webkit-backdrop-filter: blur( 12.5px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+input[type=text], input[type=date], select, select option{
+    background: transparent;
+    -webkit-appearance: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color:lightgray;
+    font-size: 1em;
+    padding: 0.3vw 2vw;
+    margin: 1vw 1vw 1vw 1vw;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    min-width: 20vw;
+    text-align: center;
+}
+
+select option{
+    background-color: rgba(66, 35, 179, 0.692);
 }
 
 .form {
@@ -119,7 +129,6 @@ select option{
 .todo > * {
     display: flex;
     font-size: 1.2vw;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     width: 90%;
@@ -127,17 +136,21 @@ select option{
     background: transparent;
 }
 
-p, h3 {
+p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.title {
+    min-width: 30vw;
 }
 
 .firstP {
     flex: 1 1 auto;
 }
 .secondP {
-    flex: 5 5 auto;
+    flex: 4 1 auto;
 }
 .thirdP {
     flex: 1 1 auto;
@@ -154,10 +167,27 @@ input[type=checkbox] {
     height: 2vh;
 }
 
-.finished {
-    background-color: rgba(32, 194, 26, 0.664);
+::placeholder {
+    color: lightgray;
+    opacity: 1;
 }
 
-@media screen and (max-width: 1280px) {
-    
+@media screen and (max-width: 920px) {
+    .newtaskform {
+        flex-direction: column;
+        padding: 1vh;
+    }
+
+    input[type=text], input[type=date], select, select option, .btn {
+        font-size: 1.6em;
+        min-width: 30vw;
+        text-align: center;
+        padding: 0.4vw;
+        margin: 1vw;
+    }
+
+    p {
+        font-size: 1.6vw;
+    }
+
 }

@@ -24,15 +24,15 @@
         </div>
 
         <div class="newtaskform" v-if="!isLoggin">
-            <input type="text" v-model="taskTitle" placeholder="Wpisz nazwę zadania">
-            <select v-model="taskCategory">
+            <input type="text" v-model="taskTitle" v-bind:style="taskTitleStyle" placeholder="Nazwa zadania(max 30 znaków)">
+            <select v-model="taskCategory" v-bind:style="taskCategoryStyle">
                 <option value="" disabled selected>Wybierz kategorię</option>
                 <option value="praca">Praca</option>
                 <option value="zakupy">Zakupy</option>
                 <option value="dzieci">Dzieci</option>
                 <option value="rozrywka">Rozrywka</option>
             </select>
-            <input type="date" placeholder="wybierz datę" v-model="taskDate">
+            <input type="date" @keyup.enter="addNewTask" placeholder="wybierz datę" v-model="taskDate" v-bind:style="taskDateStyle">
             <button class="btn" @click="addNewTask">Dodaj zadanie</button>
         </div>
 
@@ -41,9 +41,10 @@
 
         <div class="todo" v-if="!isLoggin">
             
-                <div class="newtask" v-for="item in newTaskData" :class="{ finished: isFinished }">
-                    <input class="firstP" type="checkbox" v-model="isFinished">
-                    <h3 class="secondP">{{item.taskTitle}}</h3>
+                <div class="newtask" v-for="(item, index) in newTaskData">
+                    <p class="firstP">{{index+1}}</p>
+                    <input class="firstP" type="checkbox">
+                    <div class="title"><p>{{item.taskTitle}}</p></div>
                     <p class="thirdP">{{item.taskCategory}}</p>
                     <p class="forthP">{{item.taskDate}}</p>
                     <p class="fifthP">

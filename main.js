@@ -13,7 +13,9 @@ new Vue({
         taskCategory: "",
         taskDate: "",
         newTaskData: [],
-        isFinished: false
+        taskTitleStyle: 'background: transparent',
+        taskCategoryStyle: 'background: transparent',
+        taskDateStyle: 'background: transparent'
     },
 
     methods: {
@@ -43,23 +45,26 @@ new Vue({
 
         addNewTask: function () {
             if (this.taskTitle.length === 0) {
-                alert("Nie podano nazwy zadania!");
+                this.taskTitleStyle = "background-color:rgba(231, 20, 20, 0.85);";
             } else if (this.taskCategory === "") {
-                alert("Nie podano kategorii!");
+                this.taskCategoryStyle = "background-color: red";
             } else if (this.taskDate === "") {
-                alert("Nie podano daty!");
+                this.taskDateStyle = "background-color: red";
             } else {
-              let myObject = {
-                taskTitle: this.taskTitle,
-                taskCategory: this.taskCategory,
-                taskDate: this.taskDate
-              };
-              this.newTaskData.push(myObject);
-              this.taskTitle = "";
-              this.taskCategory = "";
-              this.taskDate = "";
+                this.taskTitleStyle = 'background: transparent';
+                this.taskCategoryStyle = 'background: transparent';
+                this.taskDateStyle = 'background: transparent';
+                
+                let myObject = {
+                    taskTitle: this.taskTitle,
+                    taskCategory: this.taskCategory,
+                    taskDate: this.taskDate
+                };
+                this.newTaskData.push(myObject);
+                this.taskTitle = "";
+                this.taskCategory = "";
+                this.taskDate = "";
             }
         },
-        
     }
 });
