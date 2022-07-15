@@ -19,8 +19,8 @@
         <div class="form" v-if="!isLoggin">
             <h2>{{formHeader}}</h2>
             <p>Nick:</p><input type="text" v-model="nickName">
-            <p>Hasło:</p><input type="password" v-model="password">
-            <button type="submit" class="btn" @click="logginIn">Zaloguj</button>
+            <p>Hasło:</p><input type="password" v-model="password" @keyup.enter="logginIn">
+            <button class="btn" @click="logginIn">Zaloguj</button>
         </div>
 
         <div class="newtaskform" v-if="isLoggin">
@@ -42,14 +42,14 @@
         <div class="todo" v-if="isLoggin">
             
                 <div class="newtask" v-for="(item, index) in newTaskData">
-                    <p class="firstP">{{index+1}}</p>
-                    <input class="firstP" type="checkbox">
+                    <p>{{index+1}}</p>
+                    <input class="pStyle" type="checkbox">
                     <div class="title"><p>{{item.taskTitle}}</p></div>
-                    <p class="thirdP">{{item.taskCategory}}</p>
-                    <p class="forthP">{{item.taskDate}}</p>
-                    <p class="fifthP">
+                    <p class="pStyle">{{item.taskCategory}}</p>
+                    <p class="pStyle">{{item.taskDate}}</p>
+
                         <button class="btnTodo" @click="newTaskData.splice(index, 1)">usuń</button>
-                    </p>
+                
                 </div>
         </div>
 
