@@ -76,12 +76,16 @@ input[type=text], input[type=date], input[type=password], select, select option 
     -webkit-appearance: none;
     border: 2px solid rgba(255, 255, 255, 0.5);
     color:lightgray;
-    font-size: 1em;
+    font-size: 1vw;
     padding: 0.3vw 2vw;
     margin: 1vw 1vw 1vw 1vw;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    margin: 1vw;
 }
 
 select option{
@@ -134,11 +138,14 @@ select option{
     background: transparent;
 }
 
+.newtask > p {
+    margin-left: 1vw;
+}
+
 .pStyle {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1 1 auto;
 }
 .title {
     flex: 4 1 auto;
@@ -163,10 +170,15 @@ input[type=checkbox] {
     }
 
     .form {
-        width: 60vw;
+        width: 50vw;
     }
 
     .form > input {
+        width: 25vw;
+        font-size: 2vw;
+    }
+
+    .form > .btn {
         width: 25vw;
     }
 
@@ -186,9 +198,12 @@ input[type=checkbox] {
         font-size: 2.5vh;    
     }
 
-    p {
-        font-size: 2vw;
+    h2 {
+        font-size: 3vw;
+    }
 
+    p {
+        font-size: 1.8vw;
     }
 
     .title {

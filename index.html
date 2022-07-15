@@ -12,16 +12,19 @@
         <div class="header">
             <h1>TODDO LIST</h1>
         </div>
+
         <div class="pass" v-if="!isLoggin">
             <p>Nick: admin</p>
             <p>Hasło: qwerty</p>
         </div>
+
         <div class="form" v-if="!isLoggin">
             <h2>{{formHeader}}</h2>
             <p>Nick:</p><input type="text" v-model="nickName">
             <p>Hasło:</p><input type="password" v-model="password" @keyup.enter="logginIn">
             <button class="btn" @click="logginIn">Zaloguj</button>
         </div>
+
 
         <div class="newtaskform" v-if="isLoggin">
             <input type="text" maxlength="25" v-model="taskTitle" v-bind:style="taskTitleStyle" placeholder="Nazwa zadania(max 25 znaków)">
