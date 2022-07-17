@@ -39,25 +39,18 @@
             <button class="btn" @click="addNewTask">Dodaj zadanie</button>
         </div>
 
-            
-
-
         <div class="todo" v-if="isLoggin">
-            
                 <div class="newtask" v-for="(item, index) in newTaskData">
                     <p>{{index+1}}</p>
-                    <input class="pStyle" type="checkbox">
+                    <input class="check" type="checkbox">
                     <div class="title"><p>{{item.taskTitle}}</p></div>
                     <p class="pStyle">{{item.taskCategory}}</p>
                     <p class="pStyle">{{item.taskDate}}</p>
-
-                        <button class="btnTodo" @click="newTaskData.splice(index, 1)">usuń</button>
-                
+                    <button class="btnTodo" @click="newTaskData.splice(index, 1)">usuń</button>
                 </div>
         </div>
-
-
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>

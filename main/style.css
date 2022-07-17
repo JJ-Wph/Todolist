@@ -84,10 +84,6 @@ input[type=text], input[type=date], input[type=password], select, select option 
     box-sizing: border-box;
 }
 
-input[type=checkbox] {
-    margin: 1vw;
-}
-
 select option{
     background-color: rgba(66, 35, 179, 0.692);
 }
@@ -152,8 +148,9 @@ select option{
 }
 
 input[type=checkbox] {
-    width: 2vw;
+    width: 1vw;
     height: 2vh;
+    margin: 1vw;
 }
 
 ::placeholder {
